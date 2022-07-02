@@ -15,6 +15,7 @@ namespace MVC1.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.message = "Data recieved";
             return View();
         }
 
@@ -27,6 +28,12 @@ namespace MVC1.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+        public IActionResult test(string firstname, string lastname, string email, int phone)
+        {
+
+
+            return View();
         }
     }
 }
